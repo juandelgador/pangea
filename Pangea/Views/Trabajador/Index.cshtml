@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Pangea.Models.Trabajador>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_rol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_sucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.habilitado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_trabajador_crea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_crea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_trabajador_modif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_modif)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_rol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_sucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.habilitado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_trabajador_crea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_crea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_trabajador_modif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_modif)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
